@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    /* height: 100vh; */
+    background-color: #000000;
+    color:#F6F6F6;
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 5% 0% 0% 15%;
+}
+
+.header_menu{
+    display: flex;
+    gap:80px;
+}
+
+.header_menu_link{
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight:600;
+    color: #22D4FD;
+    text-decoration: none;
+}
+
+.header_menu_link:hover{
+    color: #007bff;
+}
+
+strong {
+    color:#22D4FD;
+}
+
+.titulo-destacado{
+    color:#22D4FD;
+}
+
+.presentacion {
+    display: flex;
+    padding: 5% 15%;
+    justify-content: start;
+    gap: 100px;
+    text-align: center;
+    
+}
+ 
+.presentacion_apetit, .presentacion_paghanini{
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    margin-top: 55px;
+}
+
+.presentacion_yo{
+    display: flex;
+    flex-direction: column;
+    gap:80px;
+}
+
+.presentacion_yo_titulo{
+    cursor:not-allowed;
+}
+.presentacion_yo_titulo, .presentacion_paghanini_titulo, .presentacion_apetit_titulo{
+    font-family: "Krona One", sans-serif;
+    font-size: 36px;
+    text-decoration: none;
+    color: #F6F6F6;
+}
+
+.presentacion_yo_imagen{
+    border-radius: 20%;
+    box-shadow: 0px 5px 25px #22d5fd44;
+    filter: grayscale();
+}
+
+.presentacion_apetit_imagengg {
+    transform: scaleX(-1);
+}
+
+.video_paghanini,.video_apetit { /*fondos*/
+    position: absolute;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Ajusta la imagen de fondo para que cubra todo el contenedor */
+    transition: opacity 0.3s ease;
+    display: none;
+    margin-left: 450px;
+  }
+
+  .video_apetit{
+    top:105px;
+ }
+ .video_paghanini{
+    bottom:10px;
+ }
+
+
+.presentacion_apetit, .presentacion_paghanini {
+    position: relative; /* Necesario para posicionar las imágenes */
+    width: 280px; /* Ajusta el ancho según sea necesario */
+    height: 280px; /* Ajusta la altura según sea necesario */
+    cursor: pointer;
+  }
+  
+  .presentacion_apetit_imagen,.presentacion_paghanini_imagen { /*fondos*/
+    width: 280px;
+    height: 280px;
+    object-fit: cover; /* Ajusta la imagen de fondo para que cubra todo el contenedor */
+    transition: opacity 0.3s ease;
+  }
+  
+  .presentacion_apetit_imagengg, .presentacion_paghanini_imagenkiss  { /*cubiertas*/
+    position: absolute; /* Posiciona la imagen encima de la imagen de fondo */
+    width: 280px;
+    height: 280px;
+    opacity: 0; /* Oculta la imagen por defecto */
+    transition: opacity 0.3s ease; /* Agrega una transición suave para la opacidad */
+  }
+  
+  .presentacion_apetit:hover .presentacion_apetit_imagengg, .presentacion_paghanini:hover .presentacion_paghanini_imagenkiss{
+    opacity: 1; /* Muestra la imagen al hacer hover */
+  }
+ 
+  .presentacion_apetit:hover .presentacion_apetit_imagen,  .presentacion_paghanini:hover .presentacion_paghanini_imagen {
+    opacity: 0; /* Oculta la imagen de fondo al hacer hover */
+  }
+
+  .presentacion_apetit:hover .video_apetit, .presentacion_paghanini:hover .video_paghanini{
+    display: block;
+ }
+
+ .presentacion_apetit_titulo:hover,.presentacion_paghanini_titulo:hover,.presentacion_yo_titulo:hover{
+    color: #22D4FD;
+ }
+
+ .footer{
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: #22D4FD;
+    color: #000000;
+    text-align: center;
+    padding: 23.64px;
+}
